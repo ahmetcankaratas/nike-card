@@ -1,0 +1,153 @@
+@import url(./reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+  --text-xs: 0.6rem;
+  --text-sm: 0.8rem;
+  --text-md: 1.1rem;
+  --text-lg: 1.2rem;
+  --text-xl: 2rem;
+  --text-xxl: 12rem;
+
+  --color-blue-light:  rgb(0, 179, 234);
+  --color-gray-light: rgb(135, 135, 135);
+  --color-gray: rgba(255, 255, 255, 0.04);
+  --color-gray-dark: rgb(41, 41, 41);
+  --color-white: rgb(255, 255, 255);
+  --color-black: rgb(17, 17, 17);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.holder {
+  width: 320px;
+  height: 450px;
+}
+
+.holder .card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-gray-dark);
+  box-shadow: 15px 15px 10px -10px rgba(0, 0, 0, 0.75);
+  border-radius: 1.1rem;
+  overflow: hidden;
+}
+
+.holder .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-blue-light);
+  clip-path: circle(300px at 80% -20%);
+  transition: 0.5s ease-in-out;
+}
+
+.holder .card:hover:before {
+  clip-path: circle(100%);
+}
+
+.holder .card:after {
+  content: "Nike";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: var(--text-xxl);
+  font-weight: 800;
+  font-style: italic;
+  color: var(--color-gray);
+  pointer-events: none;
+}
+
+.holder .card .card-header img {
+  width: 270px;
+  position: absolute;
+  transform: translateX(10%) rotate(25deg);
+  transition: 0.5s ease-in-out;
+}
+
+.holder .card:hover .card-header img {
+  transform: translate(10%, 10%) rotate(0deg) scale(1.4);
+}
+
+.holder .card .card-body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 210px;
+  text-align: center;
+}
+
+.holder .card .card-body .title {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-white);
+  font-size: var(--text-lg);
+}
+
+.holder .card .card-body .variant-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+}
+
+.holder .card .card-body .variant-holder label {
+  font-size: var(--text-sm);
+  color: var(--color-gray-light);
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.holder .card .card-body .variant-holder ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.holder .card .card-body .variant-holder ul li input[type="radio"] {
+  display: none;
+}
+
+.holder .card .card-body .variant-holder ul li label {
+  width: 1.4rem;
+  height: 1.4rem;
+  text-align: center;
+  line-height: 1.4rem;
+  font-size: var(--text-sm);
+  display: inline-block;
+  color: var(--color-black);
+  background-color: var(--color-gray-light);
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.holder
+  .card
+  .card-body
+  .variant-holder
+  ul
+  li
+  input[type="radio"]:checked
+  + label {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--color-gray-light);
+  outline-offset: 2px;
+}
