@@ -2,7 +2,7 @@
 
 This project is built using just HTML5 and CSS3.
 
-LiveURL: https://ahmetcankaratas.github.io/nike-shoes-product-card/
+LiveURL: https://ahmetcankaratas.github.io/nike-card/
 
 ## **🔎 Technologies**
 
