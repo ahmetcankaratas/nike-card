@@ -28,13 +28,13 @@ A step by step guide that will tell you how to get the development environment u
 - Clone the repository
 
 ```
-git clone https://github.com/ahmetcankaratas/nike-shoes-product-card/
+git clone https://github.com/ahmetcankaratas/nike-card/
 ```
 
 - open directiory
 
 ```
-cd nike-shoes-product-card
+cd nike-card
 ```
 
 - open index.html
